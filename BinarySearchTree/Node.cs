@@ -2,42 +2,25 @@
 
 namespace BinarySearchTree
 {
-    public class Node<T>
+    public class Node
     {
         //private member variables
-        private T data;
-        private NodeList<T> neighbors = null;
+        public int data;
+        public Node leftChild;
+        public Node rightChild;
+        
+        public void DisplayNode()
+        {
+            Console.Write(data + " ");
+        }
 
-        public Node() { }
-        public Node(T data) : this(data, null) { }
-        public Node(T data, NodeList<T> neighbors)
+        public Node(int data)
         {
             this.data = data;
-            this.neighbors = neighbors;
+            leftChild = null;
+            rightChild = null;
         }
 
-        public T Value
-        {
-            get
-            {
-                return data;
-            }
-            set
-            {
-                data = value;
-            }
-        }
-
-        protected NodeList<T> Neighbors
-        {
-            get
-            {
-                return neighbors;
-            }
-            set
-            {
-                neighbors = value;
-            }
-        }
+       
     }
 }
