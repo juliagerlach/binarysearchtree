@@ -1,26 +1,25 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
 
 namespace BinarySearchTree
 {
-    public class Node
+    public class Node<T>
     {
-        //private member variables
-        public int data;
-        public Node leftChild;
-        public Node rightChild;
-        
-        public void DisplayNode()
+        public T value;
+        public Node<T> left;
+        public Node<T> right;
+
+        public Node(T value)
         {
-            Console.Write(data + " ");
+            this.value = value;
+            left = right = null;
         }
 
-        public Node(int data)
-        {
-            this.data = data;
-            leftChild = null;
-            rightChild = null;
-        }
 
-       
     }
 }
+
